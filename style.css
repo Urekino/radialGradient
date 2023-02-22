@@ -1,0 +1,27 @@
+.imageClass {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: 450px;
+    background: url("binancecard.png") no-repeat;
+    margin: 50px;
+    background-size: contain;
+    border:1px solid none;
+}
+
+.borderClass{   
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 300px;
+    height: 190px;
+    background: red;
+    opacity: 0;
+    
+}
+
+.borderClass:hover {
+    background: radial-gradient(#e66465, #9198e5);
+    opacity: 50%;
+}
