@@ -9,7 +9,6 @@
     background-size: contain;
     border:1px solid none;
 }
-
 .borderClass{   
     position: absolute;
     top: 150px;
@@ -18,11 +17,33 @@
     height: 190px;
     border-radius: 16px;
     background: red;
-    opacity: 0;
+    opacity:0%;
+    
     
 }
-
-.borderClass:hover {
-    background: radial-gradient(#e66465, #9198e5);
+/*.borderClass:hover {
     opacity: 50%;
+    background: 
+        radial-gradient(
+        at center, #3498db, #9b59b6
+        );
+}*/
+.borderClass::before{
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, rgb(49, 141, 13), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
 }
+.borderClass:hover{
+    background: radial-gradient(#e66465, #9198e5);
+    opacity:30%
+}
+.borderClass:hover::before {
+    --size: 200px;  
+}
+
