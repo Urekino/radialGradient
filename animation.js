@@ -1,5 +1,5 @@
 
-let bor = document.querySelector('.borderId');
+let bor = document.querySelector(".borderClass");
 bor.addEventListener('mousemove', e => {
     let rect = e.target.getBoundingClientRect();
     let x = e.clientX - rect.left;
